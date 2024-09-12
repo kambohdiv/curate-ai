@@ -12,41 +12,41 @@ cloudinary.v2.config({
 
 // Interfaces for data structures
 interface Job {
-  title: string;
-  period: string;
-  company: string;
-  description: string;
+  title?: string;
+  period?: string;
+  company?: string;
+  description?: string;
 }
 
 interface Education {
-  title: string;
-  period: string;
-  company: string;
-  description: string;
+  title?: string;
+  period?: string;
+  company?: string;
+  description?: string;
 }
 
 interface Project {
-  title: string;
-  imageUrl: string;
-  description: string;
+  title?: string;
+  imageUrl?: string;
+  description?: string;
   projectLink?: string;
 }
 
 interface Achievement {
-  id: string;
-  url: string;
-  title: string;
+  id?: string;
+  url?: string;
+  title?: string;
 }
 
 interface ProfileData {
-  name: string;
-  title: string;
-  jobs: Job[];
-  education: Education[];
+  name?: string;
+  title?: string;
+  jobs?: Job[];
+  education?: Education[];
   content?: string;
   imageUrl?: string;
   status?: string;
-  email: string;
+  email?: string;
   mailtoLink?: string;
   contactHeading?: string;
   contactDescription?: string;
@@ -55,10 +55,10 @@ interface ProfileData {
   instagramLink?: string;
   linkedinLink?: string;
   twitterLink?: string;
-  projects: Project[];
-  achievements: Achievement[];
-  font: string; // New field for font
-  userId: string; // Add userId to associate with Clerk's user
+  projects?: Project[];
+  achievements?: Achievement[];
+  font?: string; // New field for font
+  userId?: string; // Add userId to associate with Clerk's user
 }
 
 // Function to upload a single image to Cloudinary in WebP format
@@ -82,28 +82,13 @@ async function uploadImageToCloudinary(url: string): Promise<string | null> {
 export async function POST(request: Request): Promise<NextResponse> {
   const profileData: ProfileData = await request.json();
 
-  // Validate required fields
-  if (
-    !profileData.name ||
-    !profileData.title ||
-    profileData.jobs.length === 0 ||
-    profileData.education.length === 0 ||
-    profileData.projects.length === 0 ||
-    profileData.achievements.length === 0
-  ) {
-    return NextResponse.json(
-      { error: 'Name, title, at least one job, education, project, and achievement are required' },
-      { status: 400 }
-    );
-  }
-
   let connection: PoolConnection | null = null;
 
   try {
     const profileImageUrl = await uploadImageToCloudinary(profileData.imageUrl || '');
 
-    const updatedProjects: Project[] = profileData.projects;
-    const updatedAchievements: Achievement[] = profileData.achievements;
+    const updatedProjects: Project[] = profileData.projects || [];
+    const updatedAchievements: Achievement[] = profileData.achievements || [];
 
     connection = await pool.getConnection();
     await connection.beginTransaction();
@@ -114,15 +99,15 @@ export async function POST(request: Request): Promise<NextResponse> {
       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
       `,
       [
-        profileData.userId, // Save the userId from Clerk
-        profileData.name,
-        profileData.title,
-        JSON.stringify(profileData.jobs),
-        JSON.stringify(profileData.education),
+        profileData.userId || '', // Optional userId
+        profileData.name || '',
+        profileData.title || '',
+        JSON.stringify(profileData.jobs || []),
+        JSON.stringify(profileData.education || []),
         profileData.content || '',
         profileImageUrl,
         profileData.status || '',
-        profileData.email,
+        profileData.email || '',
         profileData.mailtoLink || '',
         profileData.contactHeading || '',
         profileData.contactDescription || '',
@@ -133,7 +118,7 @@ export async function POST(request: Request): Promise<NextResponse> {
         profileData.twitterLink || '',
         JSON.stringify(updatedProjects),
         JSON.stringify(updatedAchievements),
-        profileData.font,
+        profileData.font || '',
       ]
     );
 
