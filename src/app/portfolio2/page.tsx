@@ -1,13 +1,14 @@
-'use client'
+"use client";
 
 import React from "react";
 import Header from "@/app/temp2/Header";
+import Intro from "../temp2/Intro";
 
 const Portfolio2Page: React.FC = () => {
   return (
-    <div className="bg-slate-600">
+    <div className="bg-[#FEFFF0]">
       <Header />
-      {/* Other sections of the portfolio will go here */}
+      <Intro />
     </div>
   );
 };
