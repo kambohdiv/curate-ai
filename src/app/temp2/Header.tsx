@@ -1,67 +1,52 @@
 "use client";
 
-import React from 'react';
-import Image from 'next/image';
-import { FaHome } from 'react-icons/fa'; // Assuming an icon library is used for the home icon
+import React from "react";
+import Navbar from "@/app/temp2/Navbar"; // Update the path to Navbar if necessary
 
 const Header: React.FC = () => {
   return (
-    <header className="w-full px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24 py-4 bg-black flex justify-between items-center">
-      {/* Left Section: Logo and Brand Name */}
-      <div className="flex items-center space-x-3">
-        {/* Logo */}
-        <div className="w-[39px] h-[30px] relative">
-          <Image src="/path/to/logo.png" alt="Logo" layout="fill" objectFit="contain" />
-        </div>
-        {/* Brand Name */}
-        <span className="text-white text-2xl font-normal font-poppins">
-          znisa
-        </span>
+    <header className="relative w-full bg-[#FEFFF0] h-auto py-8 md:py-12 lg:py-16 flex justify-center items-center">
+      {/* Top and bottom lines */}
+      <div className="absolute top-0 left-0 right-0 h-1 bg-black" />
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-black" />
+
+      {/* Bottom-left pink SVG (adjusted for mobile, tablet, and desktop) */}
+      <div className="absolute bottom-[-15px] left-[-15px] w-[50px] h-[42px] md:w-[100px] md:h-[84px] lg:w-[151px] lg:h-[127.684px] lg:bottom-[-30px] lg:left-[-30px]">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 85 136"
+          fill="none"
+          className="drop-shadow-[0_4.062px_0px_#BEBFB4] md:drop-shadow-[0_7.765px_0px_#BEBFB4]"
+        >
+          <path
+            d="M-1.4321 22.5903V45.1805L-13.2183 39.2874C-19.7007 36.1444 -25.7902 33.3943 -26.9689 33.3943C-31.4869 33.3943 -28.3439 39.4838 -19.8971 46.9484C-13.8076 52.2522 -11.6468 55.1987 -13.4147 55.788C-14.9862 56.3773 -26.576 59.5203 -39.5408 62.6633C-63.7025 68.5564 -68.6134 71.1101 -64.8811 74.8424C-63.5061 76.2174 -54.0771 75.6281 -33.0584 72.4852C-16.5577 70.1279 -2.61071 68.7529 -2.0214 69.3422C-1.4321 70.1279 -4.77152 77.0032 -9.28956 84.8607C-14.004 92.7181 -17.9328 99.7898 -18.3256 100.379C-18.7185 101.165 -17.7363 102.736 -16.3613 103.915C-14.004 105.879 -12.0397 104.897 -5.7537 99.397C-1.4321 95.4682 2.88951 92.3252 3.87169 92.3252C4.85387 92.3252 6.81824 98.2183 8.38973 105.487C11.7292 122.38 14.0864 127.684 18.408 127.684C23.7118 127.684 24.694 121.594 23.1225 99.0041C22.3367 87.6108 22.3367 78.5747 23.3189 78.5747C24.3011 78.5747 32.1586 81.7177 40.8018 85.45C57.8918 92.9146 63.392 93.8967 63.392 89.5751C63.392 85.6464 60.249 82.8963 45.1234 72.4852C37.8552 67.7707 31.9621 63.2526 31.9621 62.6633C31.9621 62.074 41.9804 58.7346 54.1595 55.1987C75.9639 48.9128 85 44.7876 85 41.2517C85 38.3052 72.6245 38.8945 52.9808 42.4304C43.5519 44.1983 35.1051 45.1805 34.5158 44.3947C33.9265 43.8054 35.3015 38.6981 37.6588 33.1978C46.4984 11.7862 40.9982 9.82188 27.2476 29.662C22.1403 37.323 17.0329 42.8232 16.2472 41.841C15.4614 41.0553 13.3007 33.1978 11.3363 24.5546C7.40755 6.08958 4.85387 0 1.12158 0C-0.842789 0 -1.4321 5.1074 -1.4321 22.5903Z"
+            fill="#F3ABCB"
+            stroke="#000"
+            strokeWidth="2"
+          />
+        </svg>
       </div>
 
-      {/* Center Section: Menu Items with styled buttons */}
-      <nav className="hidden sm:flex items-center bg-[#1b1b1b] rounded-[290px] border border-[#7986fb] px-1.5 py-1.5">
-        <div className="flex items-center space-x-10">
-          {/* Home button */}
-          <div className="px-4 py-2 bg-[#282828] rounded-[40px] flex items-center gap-1.5">
-            <FaHome className="w-5 h-5 text-white" />
-          </div>
+      {/* Top-right pink SVG (adjusted for mobile, tablet, and desktop) */}
+      <div className="absolute top-[-15px] right-[-15px] w-[50px] h-[42px] md:w-[100px] md:h-[84px] lg:w-[151px] lg:h-[127.684px] lg:top-[-30px] lg:right-[-30px]">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 97 89"
+          fill="none"
+          className="drop-shadow-[0_4.062px_0px_#BEBFB4] md:drop-shadow-[0_7.765px_0px_#BEBFB4]"
+        >
+          <path
+            d="M64.5679 -24.4097V-1.81953L52.7817 -7.71263C46.2993 -10.8556 40.2098 -13.6057 39.0311 -13.6057C34.5131 -13.6057 37.6561 -7.5162 46.1029 -0.0516052C52.1924 5.25218 54.3532 8.19873 52.5853 8.78804C51.0138 9.37735 39.424 12.5203 26.4592 15.6633C2.29751 21.5564 -2.61341 24.1101 1.11889 27.8424C2.49394 29.2174 11.9229 28.6281 32.9416 25.4852C49.4423 23.1279 63.3893 21.7529 63.9786 22.3422C64.5679 23.1279 61.2285 30.0032 56.7104 37.8607C51.996 45.7181 48.0672 52.7898 47.6744 53.3792C47.2815 54.1649 48.2637 55.7364 49.6387 56.915C51.996 58.8794 53.9603 57.8972 60.2463 52.397C64.5679 48.4682 68.8895 45.3252 69.8717 45.3252C70.8539 45.3252 72.8182 51.2183 74.3897 58.4865C77.7292 75.38 80.0864 80.6838 84.408 80.6838C89.7118 80.6838 90.694 74.5943 89.1225 52.0041C88.3367 40.6108 88.3367 31.5747 89.3189 31.5747C90.3011 31.5747 98.1586 34.7177 106.802 38.45C123.892 45.9146 129.392 46.8967 129.392 42.5751C129.392 38.6464 126.249 35.8963 111.123 25.4852C103.855 20.7707 97.9621 16.2526 97.9621 15.6633C97.9621 15.074 107.98 11.7346 120.159 8.19873C141.964 1.91277 151 -2.21241 151 -5.74827C151 -8.69482 138.624 -8.10551 118.981 -4.56965C109.552 -2.80172 101.105 -1.81953 100.516 -2.60528C99.9265 -3.19459 101.302 -8.30194 103.659 -13.8022C112.498 -35.2138 106.998 -37.1781 93.2476 -17.338C88.1403 -9.67699 83.0329 -4.17677 82.2472 -5.15896C81.4614 -5.9447 79.3007 -13.8022 77.3363 -22.4454C73.4075 -40.9104 70.8539 -47 67.1216 -47C65.1572 -47 64.5679 -41.8926 64.5679 -24.4097Z"
+            fill="#F3ABCB"
+            stroke="#000"
+            strokeWidth="2"
+          />
+        </svg>
+      </div>
 
-          {/* About, Projects, Contact me */}
-          <ul className="flex space-x-10 text-white font-normal text-base font-poppins">
-            <li>
-              <a href="#about" className="text-center">About</a>
-            </li>
-            <li>
-              <a href="#projects" className="text-center">Projects</a>
-            </li>
-            <li>
-              <a href="#contact" className="text-center">Contact me</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-
-      {/* Right Section: Hire Me button and Profile Icon */}
-      <div className="flex items-center space-x-4">
-        {/* Hire Me Button */}
-        <button className="px-5 py-3.5 bg-gradient-to-r from-[#7986fb] to-[#ffd39c] rounded-[40px] border border-[#7986fb]">
-          <span className="text-black font-poppins font-medium text-base">
-            Hire me
-          </span>
-        </button>
-
-        {/* Profile Icon */}
-        <div className="relative w-[49px] h-[49px]">
-          <div className="absolute inset-0 bg-gradient-to-r from-[#7986fb] to-[#ffd39c] rounded-full border border-[#7986fb]" />
-          <div className="absolute inset-0 flex items-center justify-center">
-            {/* Placeholder for the profile icon */}
-            <div className="w-5 h-5 relative border-[#7986fb]">
-              <div className="w-[6.67px] h-[6.67px] rounded-full border border-black absolute top-[1.67px] left-[6.67px]" />
-              <div className="w-[11.67px] h-[6.67px] rounded-full border border-black absolute top-[10.83px] left-[4.17px]" />
-            </div>
-          </div>
-        </div>
+      {/* Centered Navbar */}
+      <div className="relative z-10 w-full max-w-[300px] md:max-w-[700px] lg:max-w-[900px] px-4 md:px-6 lg:px-8">
+        <Navbar />
       </div>
     </header>
   );
