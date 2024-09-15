@@ -10,7 +10,7 @@ import FaqAccordion from "@/components/FaqAccordion";
 
 export default function Main() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen ">
       <Header />
       <CallToAction />
       <FeaturesSection />

@@ -3,6 +3,7 @@ import React from "react";
 import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react";
 import { SignUpButton } from "@clerk/nextjs";
+import Link from "next/link";
 const CallToAction = () => {
   const [sliderRef, slider] = useKeenSlider({
     loop: true,
@@ -75,10 +76,10 @@ const CallToAction = () => {
           <span className="absolute -z-10 inset-0 bg-gradient-to-r from-[#7B61FF] via-[#D35D90] to-[#FF7E66] translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out"></span>
         </button>
         </SignUpButton>
-        <button className="relative z-10 border border-black text-black hover:text-white text-[16px] sm:text-[18px] font-medium px-8 py-3 rounded-lg transition-all duration-200 ease-in-out overflow-hidden group">
+        <Link  className="relative z-10 border border-black text-black hover:text-white text-[16px] sm:text-[18px] font-medium px-8 py-3 rounded-lg transition-all duration-200 ease-in-out overflow-hidden group" href={"/portfolio"}>
           Lets Talk Us
           <span className="absolute -z-10 inset-0 bg-gradient-to-r from-[#7B61FF] via-[#D35D90] to-[#FF7E66] opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out"></span>
-        </button>
+        </Link>
       </div>
       {/* Carousel */}
       <div className="relative w-full max-w-[90%] mx-auto">
