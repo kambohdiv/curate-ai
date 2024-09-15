@@ -4,18 +4,18 @@ import React from "react";
 
 const Intro: React.FC = () => {
   return (
-    <div className="relative bg-[#fdfff0] w-full h-auto lg:h-[1000px] lg:w-full">
-      {/* Main Section */}
-      <div className="flex flex-col items-center justify-center md:flex-row lg:justify-start relative lg:left-[101px] lg:top-[250px] px-4 md:px-8 lg:px-0 py-10 md:py-20 lg:py-0">
+    <div className="w-[1440px] h-[1000px] relative bg-[#fdfff0]">
+      {/* Main Text Section */}
+      <div className="left-[101px] top-[250px] absolute justify-start items-center gap-[121px] inline-flex">
         {/* Left Section: SVG and Text */}
-        <div className="flex flex-col items-start gap-4 lg:gap-6">
+        <div className="flex-col justify-start items-start gap-[25px] inline-flex">
           {/* Rotated Background Block */}
-          <div className="relative w-[80px] h-[85px] md:w-[120px] md:h-[130px] lg:w-[143.48px] lg:h-[149.35px] origin-top-left rotate-[55.01deg] bg-[#f3abcb] shadow" />
+          <div className="w-[143.48px] h-[149.35px] left-[120px] top-[-50px] relative origin-top-left rotate-[55.01deg] bg-[#f3abcb] shadow" />
 
           {/* Text Section */}
-          <div className="relative w-full max-w-xs md:max-w-lg lg:max-w-[618px]">
-            <div className="absolute top-[70px] md:top-[100px] lg:top-[159px] left-1/2 transform -translate-x-1/2 w-[150px] h-[20px] md:w-[250px] md:h-[40px] lg:w-[341px] lg:h-11 bg-[#ffdc58]" />
-            <div className="text-black text-[30px] md:text-[60px] lg:text-[80px] font-normal leading-tight font-['Space Grotesk']">
+          <div className="w-[618px] h-[222px] relative">
+            <div className="w-[341px] h-11 left-[252px] top-[159px] absolute bg-[#ffdc58]" />
+            <div className="w-[618px] h-[222px] left-0 top-0 absolute text-black text-[80px] font-normal font-['Space Grotesk'] leading-tight">
               I design ✍️ top
               <br />
               notch websites
@@ -23,16 +23,15 @@ const Intro: React.FC = () => {
           </div>
 
           {/* Button and Squiggly Line */}
-          <div className="relative w-full max-w-xs md:max-w-md lg:max-w-[352.95px] h-[90px] lg:h-[124.27px]">
+          <div className="w-[352.95px] h-[124.27px] relative">
             {/* See Portfolio Button */}
-            <div className="flex justify-center items-center gap-2.5 absolute bg-[#b9e6fe] px-8 py-3 md:px-12 md:py-5 lg:px-16 lg:py-7 rounded-[70px] md:rounded-[80px] lg:rounded-[92px] border-4 md:border-6 lg:border-8 border-black">
-              <div className="text-black text-[16px] md:text-[24px] lg:text-[29px] font-bold font-['Space Grotesk']">
+            <div className="px-[55px] py-[30px] left-[0.92px] top-[24.52px] absolute origin-top-left rotate-[0.54deg] bg-[#b9e6fe] rounded-[92px] border-8 border-black justify-center items-center gap-2.5 inline-flex">
+              <div className="text-center text-black text-[29px] font-bold font-['Space Grotesk']">
                 See Portfolio
               </div>
             </div>
-
             {/* Squiggly Line SVG */}
-            <div className="absolute top-[80px] md:top-[120px] lg:top-[100px] right-[20px] md:right-[40px] lg:right-[0px] w-[38.55px] h-[81.23px] rotate-[10deg]">
+            <div className="w-[38.55px] h-[81.23px] left-[310px] top-[100px] absolute origin-top-left rotate-[10deg]">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="77"
@@ -58,16 +57,16 @@ const Intro: React.FC = () => {
         </div>
 
         {/* Right Section: Image Frame */}
-        <div className="relative mt-8 md:mt-0 w-[200px] h-[200px] md:w-[350px] md:h-[350px] lg:w-[512px] lg:h-[512px] shadow">
+        <div className="w-[512px] h-[512px] relative shadow">
           {/* Placeholder for Image */}
-          <div className="absolute w-full h-full bg-white" />
-          <div className="absolute left-[20px] md:left-[40px] lg:left-[46px] top-[20px] md:top-[40px] lg:top-[54px] w-[160px] h-[160px] md:w-[300px] md:h-[300px] lg:w-[420px] lg:h-[404px] bg-[#484747]/20 border-4 border-black" />
+          <div className="w-[512px] h-[512px] left-0 top-0 absolute bg-white" />
+          <div className="w-[420px] h-[404px] left-[46px] top-[54px] absolute bg-[#484747]/20 border-4 border-black" />
         </div>
       </div>
 
       {/* Smiley and Arrow Section Above Frame */}
-      <div className="absolute w-[150px] h-[100px] md:w-[200px] md:h-[150px] lg:w-[309.57px] lg:h-[183.69px] left-1/2 md:left-[500px] lg:left-[768px] top-[50px] md:top-[70px] lg:top-[100px] transform -translate-x-1/2">
-        <div className="absolute w-[70px] h-[70px] md:w-[100px] md:h-[100px] lg:w-[130px] lg:h-[130px] origin-top-left rotate-[-42.626deg]">
+      <div className="w-[309.57px] h-[183.69px] left-[768px] top-[100px] absolute">
+        <div className="w-[130px] h-[130px] left-[130px] top-[80px] absolute origin-top-left rotate-[-42.626deg]">
           {/* Arrow SVG */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -84,12 +83,61 @@ const Intro: React.FC = () => {
                   fill="black"
                   stroke="black"
                 />
+                <path
+                  d="M133.235 140.243L132.633 138.958C132.372 138.402 132.117 137.848 131.863 137.295C130.995 135.409 130.138 133.547 129.118 131.749L129.118 131.749C125.605 125.551 120.648 119.868 114.645 116.04C114.344 115.85 113.949 115.939 113.758 116.235C113.568 116.536 113.657 116.931 113.954 117.121C119.813 120.852 124.607 126.389 128.003 132.38L128.003 132.381C129.031 134.197 129.905 136.098 130.769 137.979C131.191 138.899 131.612 139.813 132.047 140.711C132.062 140.741 132.097 140.818 132.144 140.919C132.215 141.072 132.313 141.283 132.406 141.476C132.489 141.649 132.574 141.821 132.648 141.961C132.686 142.031 132.718 142.09 132.745 142.136C132.77 142.178 132.783 142.196 132.786 142.201C132.787 142.201 132.787 142.202 132.787 142.201L132.789 142.204C132.931 142.378 133.067 142.437 133.17 142.459C133.284 142.483 133.392 142.469 133.468 142.45L133.474 142.449L133.474 142.449C133.589 142.423 133.725 142.365 133.863 142.224C133.963 142.119 134.182 141.779 134.385 141.18L134.386 141.178C134.721 140.199 135.123 138.485 135.475 136.889C135.582 136.404 135.685 135.927 135.78 135.487C135.991 134.512 136.162 133.72 136.249 133.429C136.249 133.429 136.249 133.429 136.249 133.429L136.728 133.573C139.15 125.53 142.613 118.34 146.202 110.887C146.686 109.883 147.171 108.876 147.656 107.86L133.235 140.243ZM133.235 140.243L133.571 138.864C134.112 136.644 134.863 133.589 135.024 133.06L135.025 133.058C137.478 124.906 140.987 117.617 144.646 110.013C145.113 109.045 145.581 108.071 146.051 107.09C146.204 106.77 146.586 106.636 146.903 106.788C147.22 106.94 147.357 107.324 147.205 107.645L133.235 140.243Z"
+                  fill="black"
+                  stroke="black"
+                />
               </g>
             </g>
+            <defs>
+              <filter
+                id="filter0_d_1_973"
+                x="26.7224"
+                y="50.9785"
+                width="121.045"
+                height="95.993"
+                filterUnits="userSpaceOnUse"
+                colorInterpolationFilters="sRGB"
+              >
+                <feFlood floodOpacity="0" result="BackgroundImageFix" />
+                <feColorMatrix
+                  in="SourceAlpha"
+                  type="matrix"
+                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  result="hardAlpha"
+                />
+                <feOffset dx="-1" dy="4" />
+                <feComposite in2="hardAlpha" operator="out" />
+                <feColorMatrix
+                  type="matrix"
+                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0"
+                />
+                <feBlend
+                  mode="normal"
+                  in2="BackgroundImageFix"
+                  result="effect1_dropShadow_1_973"
+                />
+                <feBlend
+                  mode="normal"
+                  in="SourceGraphic"
+                  in2="effect1_dropShadow_1_973"
+                  result="shape"
+                />
+              </filter>
+              <clipPath id="clip0_1_973">
+                <rect
+                  width="130"
+                  height="130"
+                  fill="white"
+                  transform="translate(88.916) rotate(42.6258)"
+                />
+              </clipPath>
+            </defs>
           </svg>
         </div>
 
-        <div className="absolute w-[90px] h-[50px] md:w-[130px] md:h-[70px] lg:w-[146.59px] lg:h-[69.49px] left-0 top-[20px] md:top-[40px] lg:top-[25.88px] origin-top-left rotate-[-6.96deg]">
+        <div className="w-[146.59px] h-[69.49px] left-0 top-[25.88px] absolute origin-top-left rotate-[-6.96deg]">
           {/* Smiley Face and Zainab Text */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -97,7 +145,7 @@ const Intro: React.FC = () => {
             height="29.274px"
             viewBox="0 0 37 35"
             fill="none"
-            className="absolute left-[5px] md:left-[8px] top-[30px] md:top-[35px] lg:left-[8px] lg:top-[40px] rotate-[0deg]"
+            className="absolute left-[8px] top-[40px] rotate-[0deg]"
           >
             <path
               d="M19.5479 4.4031C18.6713 5.80238 19.9271 9.81219 21.7001 11.2897C23.0602 12.3947 24.0665 11.888 24.3315 9.94798C24.6359 7.90326 23.1377 5.00064 21.4323 4.27109C20.1328 3.70088 19.9764 3.72964 19.5479 4.4031Z"
@@ -112,14 +160,14 @@ const Intro: React.FC = () => {
               fill="black"
             />
           </svg>
-          <div className="absolute left-[30px] md:left-[35px] lg:left-[40.75px] top-[15px] md:top-[20px] lg:top-[28.31px] origin-top-left rotate-[-16.45deg] text-black text-[18px] md:text-[24px] lg:text-[29px] font-bold font-['Space Grotesk']">
+          <div className="left-[40.75px] top-[28.31px] absolute origin-top-left rotate-[-16.45deg] text-black text-[29px] font-bold font-['Space Grotesk']">
             ZAINAB
           </div>
         </div>
       </div>
 
       {/* Bottom Left Decorative SVG */}
-      <div className="absolute bottom-0 left-0 w-[90px] h-[90px] md:w-[120px] md:h-[120px] lg:w-[151px] lg:h-[127.684px]">
+      <div className="w-[151px] h-[127.684px] absolute bottom-0 left-0">
         {/* Decorative SVG */}
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -164,6 +212,8 @@ const Intro: React.FC = () => {
           </defs>
         </svg>
       </div>
+
+      {/* Additional Section Content */}
     </div>
   );
 };
